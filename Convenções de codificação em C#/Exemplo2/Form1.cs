@@ -9,14 +9,12 @@ namespace Exemplo2
         {
             InitializeComponent();
 
-            this.Click += new EventHandler(OnClick);
+            this.Click += new EventHandler(FormularioOnClick);
         }
 
-        void OnClick(object sender, EventArgs e)
+        private void FormularioOnClick(object sender, EventArgs e)
         {
             MessageBox.Show(((MouseEventArgs)e).Location.ToString());
         }
-
-
     }
 }

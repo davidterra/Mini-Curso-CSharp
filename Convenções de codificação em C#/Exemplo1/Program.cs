@@ -18,6 +18,7 @@ namespace Exemplo1
 
     static class ExampleClass
     {
+        private static int _xpto;
         public static int ResultSoFar()
         {
             return 0;
@@ -87,8 +88,11 @@ namespace Exemplo1
             var manyPhrases = new System.Text.StringBuilder();
             for (var i = 0; i < 10000; i++)
             {
-                manyPhrases.Append(phrase);
+                manyPhrases.AppendFormat("{0} {1} {0}", phrase, "acme");
+
             }
+            
+            
 
             System.Console.WriteLine("tra" + manyPhrases);
 
@@ -154,6 +158,9 @@ namespace Exemplo1
             // código do bloco finally é uma chamada para o método System.IDisposable.Dispose, use, em vez disso, uma instrução using.
 
             // This try-finally statement only calls Dispose in the finally block.
+
+           
+
             System.Drawing.Font font1 = new System.Drawing.Font("Arial", 10.0f);
             try
             {
@@ -168,7 +175,7 @@ namespace Exemplo1
             }
 
             // You can do the same thing with a using statement.
-            using (System.Drawing.Font font2 = new System.Drawing.Font("Arial", 10.0f))
+            using (var font2 = new System.Drawing.Font("Arial", 10.0f))
             {
                 byte charset = font2.GdiCharSet;
             }
@@ -204,6 +211,7 @@ namespace Exemplo1
             ExampleClass2 instance2 = new ExampleClass2();
 
             // Object initializer.
+
             var instance3 = new ExampleClass2
             {
                 Name = "Desktop",
@@ -221,6 +229,7 @@ namespace Exemplo1
             var customers = new System.Collections.Generic.List<Customer>();
             {
                 new Customer { FirstName = "Xpto", LastName = "Bar", City = "Seattle" };
+                new Customer { FirstName = "Acme", LastName = "Bar", City = "Pelotas" };
             }
 
             //Alinhe cláusulas de consulta na cláusula from, conforme mostrado nos exemplos anteriores.
