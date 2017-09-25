@@ -1,17 +1,49 @@
--> Convenções de codificação em C#
+# SOLID
 
-Criam uma aparência consistente para o código, para que os leitores possam se concentrar no conteúdo e não no layout.
-Permitem que os leitores entendam o código com mais rapidez, fazendo suposições com base na experiência anterior.
-Facilitam a cópia, a alteração e a manutenção do código.
-Demonstram as práticas recomendadas do C#.
+S    SRP    Principio da Responsabilidade Única     Uma classe deve ter um, e somente um, motivo para mudar.
+O    OCP    Princípio Aberto-Fechado                Você deve ser capaz de estender um comportamento de uma classe, sem modificá-lo.
+L    LSP    Princípio da Substituição de Liskov     As classes derivadas devem ser substituíveis por suas classes base.
+I    ISP    Princípio da Segregação da Interface    Muitas interfaces específicas são melhores do que uma interface única.
+D    DIP    Princípio da inversão da dependência    Dependa de uma abstração e não de uma implementação.
 
--> Namespaces
-	Eles organizam projetos de códigos grandes.
-	Eles são delimitados usando o operador [.].
-	O using directive elimina a necessidade de especificar o nome do namespace para cada classe.
+Os princípios SOLID devem ser aplicados para se obter os benefícios da orientação a objetos, tais como:
 
-https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/namespaces/index
+Seja fácil de se manter, adaptar e se ajustar às alterações de escopo;
+Seja testável e de fácil entendimento;
+Seja extensível para alterações com o menor esforço necessário;
+Que forneça o máximo de reaproveitamento;
+Que permaneça o máximo de tempo possível em utilização.
+Utilizando os princípios SOLID é possível evitar problemas muito comuns:
 
+Dificuldade na testabilidade / criação de testes de unidade;
+Código macarrônico, sem estrutura ou padrão;
+Dificuldades de isolar funcionalidades;
+Duplicação de código, uma alteração precisa ser feita em N pontos;
+Fragilidade, o código quebra facilmente em vários pontos após alguma mudança.
 
--> Convenções de nomenclatura
+# Interfaces
 
+O real problema do alto acoplamento é que as dependências de uma classe podem sofrer mudanças, propagando-as para a classe principal. Logo, quanto maior a dependência, mais instável é a classe, ou seja, maior a chance dela sofrer uma mudança.
+Interfaces, por sua vez, tendem a ser classes que mudam muito pouco por várias razões. Primeiro porque elas não contém detalhes de implementação, atributos ou qualquer outra coisa que tenda amudar. Segundo porque geralmente interfaces contém diversas implementações embaixo delas e o desenvolvedor tende a não alterá-la,
+pois sabe que se o fizer, precisará alterar em todas as implementações. Logo, se interfaces não mudam (ou mudam muito pouco), acoplar-se com elas pode não ser tão problemático.
+
+- Refactor
+   - Extract Interface
+      
+
+# Design Patterns
+
+Behavioral Patterns
+- Command
+
+Creational Patterns
+- Factory
+- Facede
+- MVP
+
+Referências: 
+
+http://www.dofactory.com/net/design-patterns
+http://www.eduardopires.net.br/2013/04/orientacao-a-objeto-solid/
+Test Driven Development - Teste e Design no Mundo Real com DotNet - Casa do Codigo
+Use a Cabeça! - Padrões de Projetos 
