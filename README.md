@@ -29,5 +29,5 @@ Behavioral Patterns
 
 Creational Patterns
 - Factory
-- Facede
+- Facade
 - MVP
