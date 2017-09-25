@@ -19,7 +19,7 @@ http://www.eduardopires.net.br/2013/04/orientacao-a-objeto-solid/
 
 # Interfaces
 - Refactor
-   - Extract Inteface
+   - Extract Interface
 
 # Design Patterns
 http://www.dofactory.com/net/design-patterns
